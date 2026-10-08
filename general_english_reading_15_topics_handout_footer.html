@@ -1,0 +1,1048 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>General English Reading Handout — 15 Contemporary Concepts</title>
+<style>
+  @page { size: A4; margin: 0; }
+  @media print {
+    .cover { height: 297mm; min-height: 297mm; }
+  }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --ink: #1a1410;
+    --paper: #faf8f4;
+    --cream: #f2ede4;
+    --accent: #c8402a;
+    --accent2: #2a5c8c;
+    --muted: #7a6e62;
+    --border: #d4cbbf;
+    --highlight: #e8dbc8;
+  }
+
+  @media print {
+    body { background: white; }
+    .page-break { page-break-before: always; }
+    .no-print { display: none; }
+    article { break-inside: avoid; }
+  }
+
+  body {
+    font-family: 'Noto Sans', 'DejaVu Sans', Arial, sans-serif;
+    background: var(--paper);
+    color: var(--ink);
+    line-height: 1.7;
+    font-size: 14px;
+  }
+
+  /* ── COVER ── */
+  .cover {
+    min-height: 297mm;
+    height: 297mm;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: var(--ink);
+    color: var(--paper);
+    text-align: center;
+    padding: 60px 40px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .cover::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background:
+      radial-gradient(ellipse 80% 60% at 20% 80%, rgba(200,64,42,0.18) 0%, transparent 60%),
+      radial-gradient(ellipse 60% 80% at 80% 20%, rgba(42,92,140,0.18) 0%, transparent 60%);
+  }
+
+  .cover-label {
+    font-family: 'DejaVu Sans Mono', 'Courier New', monospace;
+    font-size: 11px;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-bottom: 48px;
+    position: relative;
+  }
+
+  .cover-title {
+    font-family: 'Noto Serif', Georgia, 'Times New Roman', serif;
+    font-size: 76px;
+    font-weight: 900;
+    line-height: 0.95;
+    letter-spacing: -0.02em;
+    position: relative;
+  }
+
+  .cover-title em {
+    font-style: italic;
+    color: var(--accent);
+  }
+
+  .cover-sub {
+    font-size: 15px;
+    font-weight: 300;
+    color: rgba(250,248,244,0.6);
+    margin-top: 28px;
+    letter-spacing: 0.04em;
+    position: relative;
+  }
+
+  .cover-topics {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+    margin-top: 56px;
+    position: relative;
+  }
+
+  .topic-pill {
+    font-family: 'DejaVu Sans Mono', 'Courier New', monospace;
+    font-size: 10.5px;
+    padding: 6px 14px;
+    border: 1px solid rgba(250,248,244,0.2);
+    border-radius: 100px;
+    color: rgba(250,248,244,0.7);
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+  }
+
+  .cover-number {
+    position: absolute;
+    bottom: 40px;
+    right: 48px;
+    font-family: 'Noto Serif', Georgia, 'Times New Roman', serif;
+    font-size: 120px;
+    font-weight: 900;
+    color: rgba(250,248,244,0.04);
+    line-height: 1;
+    pointer-events: none;
+  }
+
+  /* ── SECTION PAGES ── */
+  .section-page {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 64px 48px;
+    page-break-before: always;
+  }
+
+  @media (max-width: 700px) {
+    .section-page { padding: 40px 24px; }
+  }
+
+  /* header strip */
+  .section-header {
+    display: flex;
+    align-items: flex-end;
+    gap: 20px;
+    border-bottom: 2.5px solid var(--ink);
+    padding-bottom: 16px;
+    margin-bottom: 36px;
+  }
+
+  .section-num {
+    font-family: 'DejaVu Sans Mono', 'Courier New', monospace;
+    font-size: 11px;
+    letter-spacing: 0.18em;
+    color: var(--accent);
+    text-transform: uppercase;
+    padding-bottom: 2px;
+  }
+
+  .section-title {
+    font-family: 'Noto Serif', Georgia, 'Times New Roman', serif;
+    font-size: 40px;
+    font-weight: 900;
+    line-height: 1;
+    letter-spacing: -0.01em;
+  }
+
+  .section-title em {
+    font-style: italic;
+    color: var(--accent);
+  }
+
+  .section-tag {
+    margin-left: auto;
+    font-family: 'DejaVu Sans Mono', 'Courier New', monospace;
+    font-size: 9.5px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--muted);
+    padding: 5px 10px;
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    white-space: nowrap;
+  }
+
+  /* body layout */
+  .section-body {
+    display: grid;
+    grid-template-columns: 1fr 300px;
+    gap: 40px;
+    align-items: start;
+  }
+
+  @media (max-width: 700px) {
+    .section-body { grid-template-columns: 1fr; }
+  }
+
+  /* reading text */
+  .reading-text {
+    font-size: 14px;
+    line-height: 1.85;
+    color: var(--ink);
+    text-align: justify;
+  }
+
+  .reading-text p { margin-bottom: 18px; }
+  .reading-text p:last-child { margin-bottom: 0; }
+
+  .reading-text mark {
+    background: none;
+    color: var(--accent);
+    font-weight: 500;
+  }
+
+  .reading-text .blue {
+    color: var(--accent2);
+    font-weight: 500;
+  }
+
+  /* vocab panel */
+  .vocab-panel {
+    background: var(--cream);
+    border-left: 3px solid var(--accent);
+    padding: 20px 22px;
+    border-radius: 0 8px 8px 0;
+  }
+
+  .vocab-panel-title {
+    font-family: 'DejaVu Sans Mono', 'Courier New', monospace;
+    font-size: 9.5px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 14px;
+  }
+
+  .vocab-list {
+    list-style: none;
+  }
+
+  .vocab-list li {
+    font-size: 12.5px;
+    line-height: 1.5;
+    padding: 6px 0;
+    border-bottom: 1px solid var(--border);
+    display: flex;
+    gap: 6px;
+  }
+
+  .vocab-list li:last-child { border-bottom: none; }
+
+  .vocab-term {
+    font-weight: 500;
+    color: var(--ink);
+    flex-shrink: 0;
+    font-size: 12px;
+  }
+
+  .vocab-def {
+    color: var(--muted);
+    font-size: 11.5px;
+    font-style: italic;
+  }
+
+  /* divider between sections on same page */
+  .section-divider {
+    border: none;
+    border-top: 1px solid var(--border);
+    margin: 56px 0;
+  }
+
+  /* ── INDEX PAGE ── */
+  .index-page {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 64px 48px;
+  }
+
+  .index-title {
+    font-family: 'Noto Serif', Georgia, 'Times New Roman', serif;
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 32px;
+    border-bottom: 2.5px solid var(--ink);
+    padding-bottom: 14px;
+  }
+
+  .index-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+  }
+
+  .index-item {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 16px 20px;
+    background: var(--cream);
+    border-radius: 8px;
+  }
+
+  .index-n {
+    font-family: 'Noto Serif', Georgia, 'Times New Roman', serif;
+    font-size: 28px;
+    font-weight: 900;
+    color: var(--border);
+    line-height: 1;
+    flex-shrink: 0;
+  }
+
+  .index-word {
+    font-family: 'Noto Serif', Georgia, 'Times New Roman', serif;
+    font-size: 17px;
+    font-weight: 700;
+  }
+
+  .index-desc {
+    font-size: 11.5px;
+    color: var(--muted);
+    margin-top: 3px;
+  }
+
+  .cover-source {
+    font-family: 'DM Mono', monospace;
+    font-size: 10.5px;
+    letter-spacing: 0.08em;
+    color: rgba(250,248,244,0.55);
+    margin-top: 14px;
+    position: relative;
+  }
+
+
+
+  /* ── DISCREET FOOTER ── */
+  .index-page,
+  .section-page {
+    position: relative;
+    min-height: 297mm;
+    padding-bottom: 86px;
+  }
+
+  .page-footer {
+    position: absolute;
+    left: 48px;
+    right: 48px;
+    bottom: 22px;
+    text-align: center;
+    font-family: 'DejaVu Sans Mono', 'Courier New', monospace;
+    font-size: 9.2px;
+    line-height: 1.3;
+    letter-spacing: 0.02em;
+    color: var(--muted);
+    opacity: 0.76;
+  }
+
+  .cover .page-footer {
+    color: rgba(250,248,244,0.58);
+    bottom: 26px;
+    z-index: 2;
+  }
+</style>
+</head>
+<body>
+<!-- COVER -->
+<div class="cover">
+<div class="cover-label">English Reading Practice · General Learners</div>
+<div class="cover-title">
+    Digital Lifestyle,<br/>Culture &amp;<br/><em>Modern Image</em>
+</div>
+<div class="cover-sub">Fifteen readings for general English reading and vocabulary practice</div>
+
+<div class="cover-topics">
+<span class="topic-pill">FOMO</span>
+<span class="topic-pill">JOMO</span>
+<span class="topic-pill">Doomscrolling</span>
+<span class="topic-pill">Joy Scrolling</span>
+<span class="topic-pill">De-Influencing</span>
+<span class="topic-pill">Hustle Culture</span>
+<span class="topic-pill">Slow Living</span>
+<span class="topic-pill">Aura Farming</span>
+<span class="topic-pill">Vibe Coding</span>
+<span class="topic-pill">Bluewashing</span>
+<span class="topic-pill">Pinkwashing</span>
+<span class="topic-pill">Healthwashing</span>
+<span class="topic-pill">AI-Washing</span>
+<span class="topic-pill">Artwashing</span>
+<span class="topic-pill">Sportswashing</span>
+</div>
+<div class="cover-number">15</div>
+<div class="page-footer">Nguồn học liệu: Miss Uyên · 0888 27 12 27</div></div>
+<!-- INDEX -->
+<div class="index-page page-break">
+<div class="index-title">Contents</div>
+<div class="index-grid">
+<div class="index-item">
+<div class="index-n">01</div>
+<div>
+<div class="index-word">FOMO</div>
+<div class="index-desc">Digital well-being &amp; social comparison</div>
+</div>
+</div>
+<div class="index-item">
+<div class="index-n">02</div>
+<div>
+<div class="index-word">JOMO</div>
+<div class="index-desc">Mindfulness &amp; selective attention</div>
+</div>
+</div>
+<div class="index-item">
+<div class="index-n">03</div>
+<div>
+<div class="index-word">Doomscrolling</div>
+<div class="index-desc">Media overload &amp; mental health</div>
+</div>
+</div>
+<div class="index-item">
+<div class="index-n">04</div>
+<div>
+<div class="index-word">Joy Scrolling</div>
+<div class="index-desc">Positive media use &amp; emotional balance</div>
+</div>
+</div>
+<div class="index-item">
+<div class="index-n">05</div>
+<div>
+<div class="index-word">De-Influencing</div>
+<div class="index-desc">Consumer culture &amp; online persuasion</div>
+</div>
+</div>
+<div class="index-item">
+<div class="index-n">06</div>
+<div>
+<div class="index-word">Hustle Culture</div>
+<div class="index-desc">Work identity &amp; burnout</div>
+</div>
+</div>
+<div class="index-item">
+<div class="index-n">07</div>
+<div>
+<div class="index-word">Slow Living</div>
+<div class="index-desc">Lifestyle, mindfulness &amp; balance</div>
+</div>
+</div>
+<div class="index-item">
+<div class="index-n">08</div>
+<div>
+<div class="index-word">Aura Farming</div>
+<div class="index-desc">Identity, social media &amp; self-presentation</div>
+</div>
+</div>
+<div class="index-item">
+<div class="index-n">09</div>
+<div>
+<div class="index-word">Vibe Coding</div>
+<div class="index-desc">AI, programming &amp; technical culture</div>
+</div>
+</div>
+<div class="index-item">
+<div class="index-n">10</div>
+<div>
+<div class="index-word">Bluewashing</div>
+<div class="index-desc">Corporate ethics &amp; accountability</div>
+</div>
+</div>
+<div class="index-item">
+<div class="index-n">11</div>
+<div>
+<div class="index-word">Pinkwashing</div>
+<div class="index-desc">Brand identity &amp; social justice</div>
+</div>
+</div>
+<div class="index-item">
+<div class="index-n">12</div>
+<div>
+<div class="index-word">Healthwashing</div>
+<div class="index-desc">Food marketing &amp; consumer perception</div>
+</div>
+</div>
+<div class="index-item">
+<div class="index-n">13</div>
+<div>
+<div class="index-word">AI-Washing</div>
+<div class="index-desc">Technology, deception &amp; regulation</div>
+</div>
+</div>
+<div class="index-item">
+<div class="index-n">14</div>
+<div>
+<div class="index-word">Artwashing</div>
+<div class="index-desc">Culture, urban development &amp; power</div>
+</div>
+</div>
+<div class="index-item">
+<div class="index-n">15</div>
+<div>
+<div class="index-word">Sportswashing</div>
+<div class="index-desc">Sport, geopolitics &amp; reputation</div>
+</div>
+</div>
+</div>
+<div class="page-footer">Nguồn học liệu: Miss Uyên · 0888 27 12 27</div></div>
+<!-- READING 01: FOMO -->
+<div class="section-page page-break">
+<div class="section-header">
+<div>
+<div class="section-num">Reading 01</div>
+<div class="section-title"><em>FOMO</em></div>
+</div>
+<div class="section-tag">Digital Well-being</div>
+</div>
+<div class="section-body">
+<div class="reading-text">
+<p>The term <mark>FOMO</mark>, short for <em>Fear of Missing Out</em>, is commonly used to describe the <span class="blue">uneasy feeling</span> that other people may be having <mark>rewarding experiences</mark> from which they are absent, and that they are therefore being <span class="blue">left behind</span> socially, emotionally, or even professionally. Although it is often associated with <mark>social media</mark>, the concept has broader <span class="blue">psychological significance</span> because constant exposure to <mark>curated images</mark> of success, enjoyment, and connection can intensify <span class="blue">comparison</span> and <mark>dissatisfaction</mark>. In this sense, FOMO is not simply about curiosity or interest in what others are doing. It is more accurately understood as a form of <span class="blue">anxiety</span> shaped by the fear that one is missing opportunities, relationships, or experiences that seem important to personal happiness or <mark>self-worth</mark>.</p>
+<p>At the same time, FOMO is not merely a private feeling. Commentators and psychology sources suggest that it can influence behaviour by encouraging <mark>compulsive checking</mark>, <span class="blue">overcommitment</span>, impulsive decisions, and difficulty being satisfied with the <mark>present moment</mark>. However, its effects can become especially damaging when external visibility is mistaken for <span class="blue">genuine fulfillment</span>, and when people begin to measure their own lives against the most carefully curated versions of others' lives. For that reason, FOMO has become an important concept in discussions of <mark>social comparison</mark>, <span class="blue">digital well-being</span>, and the psychological pressure created by <mark>always-connected online environments</mark>.</p>
+</div>
+<div class="vocab-panel">
+<div class="vocab-panel-title">Key Vocabulary</div>
+<ul class="vocab-list">
+<li><span class="vocab-term">FOMO</span><span class="vocab-def">nỗi sợ bị bỏ lỡ</span></li>
+<li><span class="vocab-term">uneasy feeling</span><span class="vocab-def">cảm giác bất an</span></li>
+<li><span class="vocab-term">rewarding experiences</span><span class="vocab-def">những trải nghiệm đáng giá</span></li>
+<li><span class="vocab-term">left behind</span><span class="vocab-def">bị bỏ lại phía sau</span></li>
+<li><span class="vocab-term">curated images</span><span class="vocab-def">hình ảnh được chọn lọc kỹ</span></li>
+<li><span class="vocab-term">comparison</span><span class="vocab-def">sự so sánh</span></li>
+<li><span class="vocab-term">dissatisfaction</span><span class="vocab-def">sự không hài lòng</span></li>
+<li><span class="vocab-term">anxiety</span><span class="vocab-def">sự lo âu</span></li>
+<li><span class="vocab-term">self-worth</span><span class="vocab-def">giá trị bản thân</span></li>
+<li><span class="vocab-term">compulsive checking</span><span class="vocab-def">việc kiểm tra một cách cưỡng bách</span></li>
+<li><span class="vocab-term">overcommitment</span><span class="vocab-def">sự ôm đồm quá mức</span></li>
+<li><span class="vocab-term">present moment</span><span class="vocab-def">khoảnh khắc hiện tại</span></li>
+<li><span class="vocab-term">genuine fulfillment</span><span class="vocab-def">sự thỏa mãn thực sự</span></li>
+<li><span class="vocab-term">social comparison</span><span class="vocab-def">sự so sánh xã hội</span></li>
+<li><span class="vocab-term">digital well-being</span><span class="vocab-def">trạng thái khỏe mạnh trong môi trường số</span></li>
+<li><span class="vocab-term">always-connected environments</span><span class="vocab-def">môi trường luôn kết nối</span></li>
+</ul>
+</div>
+</div>
+<div class="page-footer">Nguồn học liệu: Miss Uyên · 0888 27 12 27</div></div>
+<!-- READING 02: JOMO -->
+<div class="section-page page-break">
+<div class="section-header">
+<div>
+<div class="section-num">Reading 02</div>
+<div class="section-title"><em>JOMO</em></div>
+</div>
+<div class="section-tag">Digital Well-being</div>
+</div>
+<div class="section-body">
+<div class="reading-text">
+<p>The term <mark>JOMO</mark>, short for <em>Joy of Missing Out</em>, is commonly used to describe the positive feeling of being <span class="blue">content</span> with not <mark>participating in</mark> every event, trend, or <span class="blue">digital demand</span>. It is often presented as a <mark>response to FOMO</mark>, because instead of fearing exclusion, individuals learn to value <span class="blue">presence</span>, rest, and <mark>selective attention</mark>. In this sense, JOMO is not simply about <span class="blue">opting out</span>. It is more accurately understood as a <mark>mindset</mark> that allows people to <span class="blue">appreciate the present</span> rather than measuring it against what might be happening elsewhere.</p>
+<p>At the same time, JOMO is not merely a <mark>celebration of absence</mark>. Commentators and psychology sources suggest that it can help cultivate a <span class="blue">healthier relationship</span> with time, <mark>social expectations</mark>, and digital connection by reducing comparison and encouraging more <span class="blue">intentional choices</span>. However, its meaning depends on how it is experienced. If it reflects <mark>self-awareness</mark> and balance, it may support <span class="blue">well-being</span>; if it is driven by <mark>avoidance</mark> or social withdrawal, it may be more complicated than it first appears. For that reason, JOMO has become an important concept in discussions of <span class="blue">mindfulness</span>, digital well-being, and the search for <mark>contentment</mark> in always-connected environments.</p>
+</div>
+<div class="vocab-panel">
+<div class="vocab-panel-title">Key Vocabulary</div>
+<ul class="vocab-list">
+<li><span class="vocab-term">JOMO</span><span class="vocab-def">niềm vui khi bỏ lỡ</span></li>
+<li><span class="vocab-term">content (adj)</span><span class="vocab-def">mãn nguyện, hài lòng</span></li>
+<li><span class="vocab-term">participate in</span><span class="vocab-def">tham gia vào</span></li>
+<li><span class="vocab-term">digital demand</span><span class="vocab-def">áp lực đến từ môi trường số</span></li>
+<li><span class="vocab-term">response to FOMO</span><span class="vocab-def">phản ứng trước FOMO</span></li>
+<li><span class="vocab-term">presence</span><span class="vocab-def">sự hiện diện trọn vẹn</span></li>
+<li><span class="vocab-term">selective attention</span><span class="vocab-def">sự chú ý có chọn lọc</span></li>
+<li><span class="vocab-term">opting out</span><span class="vocab-def">chủ động không tham gia</span></li>
+<li><span class="vocab-term">mindset</span><span class="vocab-def">tư duy</span></li>
+<li><span class="vocab-term">appreciate the present</span><span class="vocab-def">trân trọng hiện tại</span></li>
+<li><span class="vocab-term">celebration of absence</span><span class="vocab-def">sự tôn vinh việc vắng mặt</span></li>
+<li><span class="vocab-term">healthier relationship</span><span class="vocab-def">mối quan hệ lành mạnh hơn</span></li>
+<li><span class="vocab-term">social expectations</span><span class="vocab-def">kỳ vọng xã hội</span></li>
+<li><span class="vocab-term">intentional choices</span><span class="vocab-def">những lựa chọn có chủ đích</span></li>
+<li><span class="vocab-term">self-awareness</span><span class="vocab-def">nhận thức về bản thân</span></li>
+<li><span class="vocab-term">contentment</span><span class="vocab-def">sự mãn nguyện</span></li>
+</ul>
+</div>
+</div>
+<div class="page-footer">Nguồn học liệu: Miss Uyên · 0888 27 12 27</div></div>
+<!-- READING 03: DOOMSCROLLING -->
+<div class="section-page page-break">
+<div class="section-header">
+<div>
+<div class="section-num">Reading 03</div>
+<div class="section-title"><em>Doom</em>scrolling</div>
+</div>
+<div class="section-tag">Media Behaviour</div>
+</div>
+<div class="section-body">
+<div class="reading-text">
+<p>The term <mark>doomscrolling</mark> refers to the <span class="blue">habit</span> of continuously scrolling through negative or <mark>distressing</mark> news online, often with a sense that one must remain <span class="blue">informed</span> even as the content becomes increasingly <mark>overwhelming</mark>. Although this behaviour may appear rational in times of crisis, health and psychology sources note that it can quickly shift from <span class="blue">information-seeking</span> to <mark>compulsive exposure</mark> to distressing content. In this sense, doomscrolling is driven by a <span class="blue">paradox</span>: people scroll in order to gain control over <mark>uncertainty</mark>, yet the constant consumption of <span class="blue">alarming</span> content often increases anxiety rather than reducing it.</p>
+<p>Researchers and clinicians have linked doomscrolling to stress, <mark>sleep disruption</mark>, reduced <span class="blue">well-being</span>, and a <mark>heightened sense</mark> of threat, especially when individuals repeatedly encounter emotionally charged headlines or violent imagery. The practice does not simply reflect personal weakness or poor <span class="blue">self-discipline</span>. It is also shaped by <mark>digital environments</mark> that reward <span class="blue">endless engagement</span> and make it difficult to disengage from negative information. As a result, doomscrolling has become an important concept in discussions of <mark>mental health</mark>, <span class="blue">media overload</span>, and the psychological costs of life online.</p>
+</div>
+<div class="vocab-panel">
+<div class="vocab-panel-title">Key Vocabulary</div>
+<ul class="vocab-list">
+<li><span class="vocab-term">doomscrolling</span><span class="vocab-def">thói quen lướt tin tiêu cực liên tục</span></li>
+<li><span class="vocab-term">habit</span><span class="vocab-def">thói quen</span></li>
+<li><span class="vocab-term">distressing</span><span class="vocab-def">gây căng thẳng, đau buồn</span></li>
+<li><span class="vocab-term">informed</span><span class="vocab-def">được cập nhật thông tin</span></li>
+<li><span class="vocab-term">overwhelming</span><span class="vocab-def">quá tải</span></li>
+<li><span class="vocab-term">information-seeking</span><span class="vocab-def">việc tìm kiếm thông tin</span></li>
+<li><span class="vocab-term">compulsive exposure</span><span class="vocab-def">sự tiếp xúc mang tính cưỡng bách</span></li>
+<li><span class="vocab-term">paradox</span><span class="vocab-def">nghịch lý</span></li>
+<li><span class="vocab-term">uncertainty</span><span class="vocab-def">sự bất định</span></li>
+<li><span class="vocab-term">alarming</span><span class="vocab-def">đáng báo động</span></li>
+<li><span class="vocab-term">sleep disruption</span><span class="vocab-def">gián đoạn giấc ngủ</span></li>
+<li><span class="vocab-term">heightened sense of threat</span><span class="vocab-def">cảm giác đe dọa tăng cao</span></li>
+<li><span class="vocab-term">self-discipline</span><span class="vocab-def">tính tự kỷ luật</span></li>
+<li><span class="vocab-term">digital environments</span><span class="vocab-def">môi trường số</span></li>
+<li><span class="vocab-term">endless engagement</span><span class="vocab-def">tương tác không ngừng</span></li>
+<li><span class="vocab-term">media overload</span><span class="vocab-def">quá tải truyền thông</span></li>
+</ul>
+</div>
+</div>
+<div class="page-footer">Nguồn học liệu: Miss Uyên · 0888 27 12 27</div></div>
+<!-- READING 04: JOY SCROLLING -->
+<div class="section-page page-break">
+<div class="section-header">
+<div>
+<div class="section-num">Reading 04</div>
+<div class="section-title"><em>Joy</em> Scrolling</div>
+</div>
+<div class="section-tag">Media Behaviour</div>
+</div>
+<div class="section-body">
+<div class="reading-text">
+<p>The term <mark>joy scrolling</mark> is commonly used to describe the <span class="blue">intentional</span> habit of scrolling through <mark>uplifting</mark>, amusing, or <span class="blue">inspiring</span> online content in order to <mark>cultivate</mark> a more <span class="blue">positive emotional experience</span>. It is often presented as a <mark>contrast</mark> to doomscrolling, since the goal is not to consume <span class="blue">distressing headlines</span> but to <mark>seek out</mark> moments of humour, creativity, encouragement, or relief. In this sense, joy scrolling reflects a more <span class="blue">selective approach</span> to <mark>digital media</mark>: rather than passively consuming whatever appears, users try to shape their online environment toward content that feels <span class="blue">restorative</span> or emotionally lighter.</p>
+<p>At the same time, joy scrolling is not simply about entertainment. Commentators and educators have suggested that it can function as a small form of <mark>emotional self-management</mark>, especially in periods when online spaces feel <span class="blue">saturated with anxiety</span>, conflict, or distressing content. However, its value depends on how it is used. If it becomes only a form of <mark>avoidance</mark>, it may offer temporary comfort without addressing deeper stress. For that reason, joy scrolling is best understood as an attempt to balance digital consumption by making room for content that supports <span class="blue">well-being</span>, curiosity, and a <mark>healthier relationship</mark> with life online.</p>
+</div>
+<div class="vocab-panel">
+<div class="vocab-panel-title">Key Vocabulary</div>
+<ul class="vocab-list">
+<li><span class="vocab-term">joy scrolling</span><span class="vocab-def">lướt nội dung tích cực để cải thiện cảm xúc</span></li>
+<li><span class="vocab-term">intentional</span><span class="vocab-def">có chủ đích</span></li>
+<li><span class="vocab-term">uplifting</span><span class="vocab-def">nâng tinh thần</span></li>
+<li><span class="vocab-term">inspiring</span><span class="vocab-def">truyền cảm hứng</span></li>
+<li><span class="vocab-term">cultivate</span><span class="vocab-def">vun đắp, nuôi dưỡng</span></li>
+<li><span class="vocab-term">positive emotional experience</span><span class="vocab-def">trải nghiệm cảm xúc tích cực</span></li>
+<li><span class="vocab-term">contrast</span><span class="vocab-def">sự đối lập</span></li>
+<li><span class="vocab-term">distressing headlines</span><span class="vocab-def">các tiêu đề gây căng thẳng</span></li>
+<li><span class="vocab-term">seek out</span><span class="vocab-def">chủ động tìm kiếm</span></li>
+<li><span class="vocab-term">selective approach</span><span class="vocab-def">cách tiếp cận có chọn lọc</span></li>
+<li><span class="vocab-term">restorative</span><span class="vocab-def">mang tính phục hồi</span></li>
+<li><span class="vocab-term">emotional self-management</span><span class="vocab-def">tự điều tiết cảm xúc</span></li>
+<li><span class="vocab-term">saturated with anxiety</span><span class="vocab-def">ngập tràn bởi sự lo âu</span></li>
+<li><span class="vocab-term">avoidance</span><span class="vocab-def">sự né tránh</span></li>
+<li><span class="vocab-term">well-being</span><span class="vocab-def">trạng thái an ổn, khỏe mạnh</span></li>
+<li><span class="vocab-term">healthier relationship</span><span class="vocab-def">mối quan hệ lành mạnh hơn</span></li>
+</ul>
+</div>
+</div>
+<div class="page-footer">Nguồn học liệu: Miss Uyên · 0888 27 12 27</div></div>
+<!-- READING 05: DE-INFLUENCING -->
+<div class="section-page page-break">
+<div class="section-header">
+<div>
+<div class="section-num">Reading 05</div>
+<div class="section-title"><em>De-</em>Influencing</div>
+</div>
+<div class="section-tag">Consumer Culture</div>
+</div>
+<div class="section-body">
+<div class="reading-text">
+<p>The term <mark>de-influencing</mark> is commonly used to describe the <span class="blue">practice</span> of advising <mark>audiences</mark> not to buy certain products, especially those that are heavily promoted, <span class="blue">overpriced</span>, or unlikely to <mark>deliver the results</mark> advertised. It is often presented as a <span class="blue">reaction</span> against <mark>influencer culture</mark> and the <span class="blue">consumer pressure</span> generated by <mark>relentless online promotion</mark>. In this sense, de-influencing reflects a more <span class="blue">critical approach</span> to <mark>digital consumption</mark>: rather than encouraging people to follow trends automatically, it invites them to question whether particular purchases are necessary, <span class="blue">worthwhile</span>, or aligned with their <mark>actual needs</mark>.</p>
+<p>At the same time, de-influencing is not simply the opposite of influencing. Commentators have noted that it can still shape desire, <mark>redirect attention</mark>, and even generate new forms of <span class="blue">consumer behaviour</span> by telling audiences what to avoid and, sometimes, what to choose instead. This makes the concept especially interesting, because it combines <mark>scepticism</mark> toward <span class="blue">overconsumption</span> with the continued power of online persuasion. As a result, de-influencing has become an important term in discussions of <mark>authenticity</mark>, <span class="blue">mindful spending</span>, and the changing relationship between social media creators and <mark>consumer trust</mark>.</p>
+</div>
+<div class="vocab-panel">
+<div class="vocab-panel-title">Key Vocabulary</div>
+<ul class="vocab-list">
+<li><span class="vocab-term">de-influencing</span><span class="vocab-def">khuyên người xem không nên mua sản phẩm</span></li>
+<li><span class="vocab-term">practice</span><span class="vocab-def">cách làm, thực hành</span></li>
+<li><span class="vocab-term">audience</span><span class="vocab-def">khán giả</span></li>
+<li><span class="vocab-term">overpriced</span><span class="vocab-def">bị định giá quá cao</span></li>
+<li><span class="vocab-term">deliver results</span><span class="vocab-def">mang lại kết quả</span></li>
+<li><span class="vocab-term">reaction</span><span class="vocab-def">phản ứng</span></li>
+<li><span class="vocab-term">influencer culture</span><span class="vocab-def">văn hóa influencer</span></li>
+<li><span class="vocab-term">consumer pressure</span><span class="vocab-def">áp lực tiêu dùng</span></li>
+<li><span class="vocab-term">relentless promotion</span><span class="vocab-def">quảng bá dồn dập</span></li>
+<li><span class="vocab-term">critical approach</span><span class="vocab-def">cách tiếp cận phản biện</span></li>
+<li><span class="vocab-term">digital consumption</span><span class="vocab-def">sự tiêu thụ trong môi trường số</span></li>
+<li><span class="vocab-term">worthwhile</span><span class="vocab-def">đáng giá</span></li>
+<li><span class="vocab-term">scepticism</span><span class="vocab-def">sự hoài nghi</span></li>
+<li><span class="vocab-term">authenticity</span><span class="vocab-def">tính chân thật</span></li>
+<li><span class="vocab-term">mindful spending</span><span class="vocab-def">chi tiêu có ý thức</span></li>
+<li><span class="vocab-term">consumer trust</span><span class="vocab-def">niềm tin người tiêu dùng</span></li>
+</ul>
+</div>
+</div>
+<div class="page-footer">Nguồn học liệu: Miss Uyên · 0888 27 12 27</div></div>
+<!-- READING 06: HUSTLE CULTURE -->
+<div class="section-page page-break">
+<div class="section-header">
+<div>
+<div class="section-num">Reading 06</div>
+<div class="section-title"><em>Hustle</em> Culture</div>
+</div>
+<div class="section-tag">Work &amp; Identity</div>
+</div>
+<div class="section-body">
+<div class="reading-text">
+<p>The term <mark>hustle culture</mark> is commonly used to describe a <span class="blue">mindset</span> that <mark>glorifies</mark> constant productivity, <span class="blue">relentless ambition</span>, and the belief that success should be pursued through <mark>uninterrupted effort</mark>, regardless of <span class="blue">personal cost</span>. Although it is often associated with modern work culture and social media, the idea has broader <mark>psychological significance</mark> because it encourages people to treat <span class="blue">exhaustion</span>, busyness, and <mark>overwork</mark> as signs of discipline or <span class="blue">personal worth</span>. In this sense, hustle culture is not simply about working hard. It is more accurately understood as a <mark>value system</mark> that rewards speed, output, and <span class="blue">performative productivity</span> while discouraging limits, <mark>recovery</mark>, and balance.</p>
+<p>At the same time, hustle culture is not merely a professional attitude. Commentators and psychology sources suggest that it can shape identity, <mark>self-esteem</mark>, and well-being by making people feel that they must always be achieving more in order to remain <span class="blue">worthy</span> or productive. However, its effects can be damaging when effort becomes <mark>disconnected from meaning</mark>, rest is treated as weakness, and stress is <span class="blue">normalised</span> rather than questioned. For that reason, hustle culture has become an important concept in discussions of <mark>burnout</mark>, <span class="blue">work-related pressure</span>, and the growing <mark>pushback</mark> against lifestyles organised around constant performance.</p>
+</div>
+<div class="vocab-panel">
+<div class="vocab-panel-title">Key Vocabulary</div>
+<ul class="vocab-list">
+<li><span class="vocab-term">hustle culture</span><span class="vocab-def">văn hóa đề cao làm việc không ngừng</span></li>
+<li><span class="vocab-term">mindset</span><span class="vocab-def">tư duy</span></li>
+<li><span class="vocab-term">glorify</span><span class="vocab-def">đề cao, tôn vinh</span></li>
+<li><span class="vocab-term">relentless ambition</span><span class="vocab-def">tham vọng không ngừng nghỉ</span></li>
+<li><span class="vocab-term">uninterrupted effort</span><span class="vocab-def">nỗ lực không gián đoạn</span></li>
+<li><span class="vocab-term">personal cost</span><span class="vocab-def">cái giá cá nhân</span></li>
+<li><span class="vocab-term">exhaustion</span><span class="vocab-def">sự kiệt sức</span></li>
+<li><span class="vocab-term">overwork</span><span class="vocab-def">làm việc quá mức</span></li>
+<li><span class="vocab-term">personal worth</span><span class="vocab-def">giá trị bản thân</span></li>
+<li><span class="vocab-term">performative productivity</span><span class="vocab-def">năng suất mang tính phô diễn</span></li>
+<li><span class="vocab-term">recovery</span><span class="vocab-def">sự phục hồi</span></li>
+<li><span class="vocab-term">self-esteem</span><span class="vocab-def">lòng tự trọng</span></li>
+<li><span class="vocab-term">disconnected from meaning</span><span class="vocab-def">tách rời khỏi ý nghĩa</span></li>
+<li><span class="vocab-term">burnout</span><span class="vocab-def">kiệt sức vì công việc</span></li>
+<li><span class="vocab-term">work-related pressure</span><span class="vocab-def">áp lực liên quan đến công việc</span></li>
+<li><span class="vocab-term">pushback</span><span class="vocab-def">sự phản ứng ngược</span></li>
+</ul>
+</div>
+</div>
+<div class="page-footer">Nguồn học liệu: Miss Uyên · 0888 27 12 27</div></div>
+<!-- READING 07: SLOW LIVING -->
+<div class="section-page page-break">
+<div class="section-header">
+<div>
+<div class="section-num">Reading 07</div>
+<div class="section-title"><em>Slow</em> Living</div>
+</div>
+<div class="section-tag">Lifestyle &amp; Mindfulness</div>
+</div>
+<div class="section-body">
+<div class="reading-text">
+<p>The term <mark>slow living</mark> is commonly used to describe a way of life that values <span class="blue">intention</span>, <mark>simplicity</mark>, and a more <span class="blue">mindful</span> relationship with time, rather than constant speed, <mark>productivity</mark>, or <span class="blue">overstimulation</span>. Although it is often associated with lifestyle culture, the idea has broader <mark>psychological significance</mark> because it reflects an effort to slow <span class="blue">daily rhythms</span> and pay closer attention to <mark>everyday experience</mark>. In this sense, slow living is not simply about doing everything at a lower speed. It is more accurately understood as a <span class="blue">deliberate resistance</span> to hurry, excess, and the pressure to treat <mark>busyness</mark> as a measure of <span class="blue">worth</span>.</p>
+<p>At the same time, slow living is not the same as <mark>inactivity</mark> or withdrawal from responsibility. Commentators and mental-health sources suggest that it can function as a way of restoring attention, reducing <span class="blue">overload</span>, and creating more space for <mark>reflection</mark>, presence, and <span class="blue">meaningful routines</span>. However, its value depends on how it is practised. If it becomes only an aesthetic ideal, it may remain <mark>superficial</mark>; if treated as a genuine <span class="blue">shift in priorities</span>, it can support well-being and a more sustainable relationship with work, consumption, and everyday life. For that reason, slow living has become an important concept in discussions of <mark>mindfulness</mark>, simplicity, and the <span class="blue">search for balance</span> in a culture shaped by speed and acceleration.</p>
+</div>
+<div class="vocab-panel">
+<div class="vocab-panel-title">Key Vocabulary</div>
+<ul class="vocab-list">
+<li><span class="vocab-term">slow living</span><span class="vocab-def">lối sống chậm</span></li>
+<li><span class="vocab-term">intention</span><span class="vocab-def">sự chủ đích</span></li>
+<li><span class="vocab-term">simplicity</span><span class="vocab-def">sự giản đơn</span></li>
+<li><span class="vocab-term">mindful</span><span class="vocab-def">có ý thức rõ ràng</span></li>
+<li><span class="vocab-term">overstimulation</span><span class="vocab-def">kích thích quá mức</span></li>
+<li><span class="vocab-term">daily rhythms</span><span class="vocab-def">nhịp sống hằng ngày</span></li>
+<li><span class="vocab-term">everyday experience</span><span class="vocab-def">trải nghiệm thường nhật</span></li>
+<li><span class="vocab-term">deliberate resistance</span><span class="vocab-def">sự chống lại có chủ đích</span></li>
+<li><span class="vocab-term">busyness</span><span class="vocab-def">trạng thái bận rộn liên tục</span></li>
+<li><span class="vocab-term">worth</span><span class="vocab-def">giá trị</span></li>
+<li><span class="vocab-term">inactivity</span><span class="vocab-def">sự không hoạt động</span></li>
+<li><span class="vocab-term">overload</span><span class="vocab-def">sự quá tải</span></li>
+<li><span class="vocab-term">reflection</span><span class="vocab-def">sự suy ngẫm</span></li>
+<li><span class="vocab-term">meaningful routines</span><span class="vocab-def">những thói quen có ý nghĩa</span></li>
+<li><span class="vocab-term">superficial</span><span class="vocab-def">hời hợt</span></li>
+<li><span class="vocab-term">search for balance</span><span class="vocab-def">sự tìm kiếm cân bằng</span></li>
+</ul>
+</div>
+</div>
+<div class="page-footer">Nguồn học liệu: Miss Uyên · 0888 27 12 27</div></div>
+<!-- READING 08: AURA FARMING -->
+<div class="section-page page-break">
+<div class="section-header">
+<div>
+<div class="section-num">Reading 08</div>
+<div class="section-title"><em>Aura</em> Farming</div>
+</div>
+<div class="section-tag">Identity &amp; Social Media</div>
+</div>
+<div class="section-body">
+<div class="reading-text">
+<p>The expression <mark>aura farming</mark> is used to describe the deliberate <span class="blue">cultivation</span> of an impressive, attractive, or <mark>charismatic public image</mark>, often through behaviour that appears effortless, self-assured, or subtly mysterious. Although the term is strongly associated with internet culture, its broader significance lies in the way identity can be <span class="blue">strategically performed</span> for <mark>public consumption</mark>. Social media has made this process especially visible, since users can shape how they are perceived through <span class="blue">carefully chosen images</span>, gestures, captions, and attitudes that <mark>communicate confidence</mark> or coolness without seeming <span class="blue">overtly performative</span>.</p>
+<p>What makes aura farming particularly interesting is that it depends on suggestion rather than <mark>direct self-promotion</mark>: the ideal image is not announced too loudly, but implied. For that reason, the practice reflects a wider shift in online culture, where status may be built less through explicit achievement than through the successful <span class="blue">projection of style</span>, <mark>composure</mark>, and <span class="blue">symbolic capital</span>. Critics might argue that this blurs the line between <mark>authenticity</mark> and performance, encouraging people to treat personality itself as something to be designed, displayed, and continuously managed.</p>
+</div>
+<div class="vocab-panel">
+<div class="vocab-panel-title">Key Vocabulary</div>
+<ul class="vocab-list">
+<li><span class="vocab-term">aura farming</span><span class="vocab-def">xây dựng hình ảnh có thần thái, nuôi dưỡng hào quang</span></li>
+<li><span class="vocab-term">cultivation</span><span class="vocab-def">sự vun đắp, nuôi dưỡng</span></li>
+<li><span class="vocab-term">charismatic public image</span><span class="vocab-def">hình tượng công khai có sức hút</span></li>
+<li><span class="vocab-term">strategically performed</span><span class="vocab-def">trình diễn có chiến lược</span></li>
+<li><span class="vocab-term">public consumption</span><span class="vocab-def">sự đón nhận của công chúng</span></li>
+<li><span class="vocab-term">carefully chosen images</span><span class="vocab-def">hình ảnh được chọn kỹ</span></li>
+<li><span class="vocab-term">communicate confidence</span><span class="vocab-def">truyền đi sự tự tin</span></li>
+<li><span class="vocab-term">overtly performative</span><span class="vocab-def">quá lộ liễu trong việc "diễn"</span></li>
+<li><span class="vocab-term">direct self-promotion</span><span class="vocab-def">tự quảng bá trực tiếp</span></li>
+<li><span class="vocab-term">projection of style</span><span class="vocab-def">sự thể hiện phong cách</span></li>
+<li><span class="vocab-term">composure</span><span class="vocab-def">vẻ điềm tĩnh</span></li>
+<li><span class="vocab-term">symbolic capital</span><span class="vocab-def">vốn biểu tượng</span></li>
+<li><span class="vocab-term">authenticity</span><span class="vocab-def">tính chân thực</span></li>
+</ul>
+</div>
+</div>
+<div class="page-footer">Nguồn học liệu: Miss Uyên · 0888 27 12 27</div></div>
+<!-- READING 09: VIBE CODING -->
+<div class="section-page page-break">
+<div class="section-header">
+<div>
+<div class="section-num">Reading 09</div>
+<div class="section-title"><em>Vibe</em> Coding</div>
+</div>
+<div class="section-tag">Technology &amp; AI</div>
+</div>
+<div class="section-body">
+<div class="reading-text">
+<p>The phrase <mark>vibe coding</mark> has emerged to describe a new style of software creation in which people use <span class="blue">natural-language prompts</span> to <mark>guide artificial intelligence systems</mark> in writing code. The term captures a shift away from traditional line-by-line programming toward a more <span class="blue">conversational, intuition-driven workflow</span>. In this model, the user does not necessarily control every detail of the code directly, but instead <mark>describes intentions</mark>, tests outputs, and <span class="blue">refines results</span> through repeated interaction with an AI tool.</p>
+<p>Supporters see this as a <mark>democratising development</mark> because it <span class="blue">lowers technical barriers</span> and allows both experienced programmers and <mark>newcomers</mark> to build digital products more quickly. At the same time, critics point out that such convenience can create <span class="blue">overconfidence</span>, shallow understanding, and new risks related to security, <mark>debugging</mark>, and <span class="blue">software quality</span>. Vibe coding therefore represents more than a passing buzzword: it signals a broader transformation in how programming is imagined, who gets to participate in it, and what counts as <mark>technical expertise</mark> in an AI-assisted era.</p>
+</div>
+<div class="vocab-panel">
+<div class="vocab-panel-title">Key Vocabulary</div>
+<ul class="vocab-list">
+<li><span class="vocab-term">vibe coding</span><span class="vocab-def">viết code bằng prompt để AI tạo mã</span></li>
+<li><span class="vocab-term">natural-language prompts</span><span class="vocab-def">câu lệnh ngôn ngữ tự nhiên</span></li>
+<li><span class="vocab-term">guide AI systems</span><span class="vocab-def">điều hướng hệ thống AI</span></li>
+<li><span class="vocab-term">intuition-driven workflow</span><span class="vocab-def">quy trình do trực giác dẫn dắt</span></li>
+<li><span class="vocab-term">describe intentions</span><span class="vocab-def">mô tả ý định</span></li>
+<li><span class="vocab-term">refine results</span><span class="vocab-def">tinh chỉnh kết quả</span></li>
+<li><span class="vocab-term">democratising development</span><span class="vocab-def">dân chủ hóa việc phát triển</span></li>
+<li><span class="vocab-term">lower technical barriers</span><span class="vocab-def">giảm rào cản kỹ thuật</span></li>
+<li><span class="vocab-term">newcomers</span><span class="vocab-def">người mới bắt đầu</span></li>
+<li><span class="vocab-term">overconfidence</span><span class="vocab-def">quá tự tin</span></li>
+<li><span class="vocab-term">debugging</span><span class="vocab-def">gỡ lỗi</span></li>
+<li><span class="vocab-term">software quality</span><span class="vocab-def">chất lượng phần mềm</span></li>
+<li><span class="vocab-term">technical expertise</span><span class="vocab-def">chuyên môn kỹ thuật</span></li>
+</ul>
+</div>
+</div>
+<div class="page-footer">Nguồn học liệu: Miss Uyên · 0888 27 12 27</div></div>
+<!-- READING 10: BLUEWASHING -->
+<div class="section-page page-break">
+<div class="section-header">
+<div>
+<div class="section-num">Reading 10</div>
+<div class="section-title"><em>Blue</em>washing</div>
+</div>
+<div class="section-tag">Corporate Ethics</div>
+</div>
+<div class="section-body">
+<div class="reading-text">
+<p>The term <mark>bluewashing</mark> is commonly used to describe situations in which companies present themselves as <span class="blue">socially responsible</span> or strongly committed to <mark>human rights</mark> by associating with <span class="blue">respected international frameworks</span>, while their actual practices may <mark>fall far short</mark> of those ideals. Critics have used it to describe cases in which firms appear to gain <span class="blue">reputational benefits</span> from affiliation without making <mark>meaningful changes</mark> to <span class="blue">labour conditions</span>, governance, or broader human rights performance.</p>
+<p>Because social responsibility is harder to measure than financial results, public claims about <mark>ethical commitment</mark> can be especially powerful as <span class="blue">image-management tools</span>. A company may highlight partnerships and carefully framed reports in order to <mark>signal moral credibility</mark> to investors, consumers, and regulators, even when evidence of concrete reform remains limited. Scholars have warned that this kind of communication can <span class="blue">distort public understanding</span>, creating the impression that <mark>accountability mechanisms</mark> are working when symbolic commitment has in fact replaced <span class="blue">substantive change</span>. Critics therefore argue that closer attention should be paid to <mark>transparent reporting</mark> and genuine improvement, not to the language of responsibility alone.</p>
+</div>
+<div class="vocab-panel">
+<div class="vocab-panel-title">Key Vocabulary</div>
+<ul class="vocab-list">
+<li><span class="vocab-term">bluewashing</span><span class="vocab-def">dùng hình ảnh trách nhiệm xã hội/nhân quyền để đánh bóng danh tiếng</span></li>
+<li><span class="vocab-term">socially responsible</span><span class="vocab-def">có trách nhiệm với xã hội</span></li>
+<li><span class="vocab-term">human rights</span><span class="vocab-def">nhân quyền</span></li>
+<li><span class="vocab-term">respected international frameworks</span><span class="vocab-def">các khuôn khổ quốc tế được tôn trọng</span></li>
+<li><span class="vocab-term">fall far short of</span><span class="vocab-def">còn kém xa, không đạt tới</span></li>
+<li><span class="vocab-term">reputational benefits</span><span class="vocab-def">lợi ích về danh tiếng</span></li>
+<li><span class="vocab-term">meaningful changes</span><span class="vocab-def">thay đổi thực chất</span></li>
+<li><span class="vocab-term">labour conditions</span><span class="vocab-def">điều kiện lao động</span></li>
+<li><span class="vocab-term">ethical commitment</span><span class="vocab-def">cam kết đạo đức</span></li>
+<li><span class="vocab-term">image-management tools</span><span class="vocab-def">công cụ quản trị hình ảnh</span></li>
+<li><span class="vocab-term">signal moral credibility</span><span class="vocab-def">phát tín hiệu về độ đáng tin đạo đức</span></li>
+<li><span class="vocab-term">distort public understanding</span><span class="vocab-def">làm sai lệch nhận thức công chúng</span></li>
+<li><span class="vocab-term">substantive change</span><span class="vocab-def">thay đổi thực chất</span></li>
+<li><span class="vocab-term">transparent reporting</span><span class="vocab-def">báo cáo minh bạch</span></li>
+</ul>
+</div>
+</div>
+<div class="page-footer">Nguồn học liệu: Miss Uyên · 0888 27 12 27</div></div>
+<!-- READING 11: PINKWASHING -->
+<div class="section-page page-break">
+<div class="section-header">
+<div>
+<div class="section-num">Reading 11</div>
+<div class="section-title"><em>Pink</em>washing</div>
+</div>
+<div class="section-tag">Brand Identity &amp; Social Justice</div>
+</div>
+<div class="section-body">
+<div class="reading-text">
+<p>The term <mark>pinkwashing</mark>, sometimes also called rainbow-washing, is widely used to describe the practice of <span class="blue">publicly aligning with LGBTQ+ inclusion</span> in ways that are highly visible but not always <mark>deeply substantive</mark>. In commercial settings, this often appears through <span class="blue">Pride-themed campaigns</span>, <mark>rainbow-branded merchandise</mark>, and marketing messages that present companies as progressive and <span class="blue">socially responsible</span>. Such gestures can certainly increase visibility, and in some cases they do reflect meaningful support. However, critics argue that the problem arises when <mark>symbolic inclusion</mark> is not matched by consistent action, such as <span class="blue">fair employment practices</span> or <mark>long-term advocacy</mark>.</p>
+<p>In these situations, inclusion becomes less a <mark>lived commitment</mark> than a carefully managed brand identity. The concern is that <span class="blue">highly polished messaging</span> may encourage the public to equate visibility with justice, even when underlying structures remain unchanged. As a result, pinkwashing is often criticised not simply for <mark>commercial opportunism</mark>, but for turning a social struggle into a reputational asset. Many observers therefore insist that <span class="blue">genuine allyship</span> should be measured not by seasonal campaigns alone, but by sustained conduct, <mark>institutional choices</mark>, and the willingness to bear real costs in support of equality.</p>
+</div>
+<div class="vocab-panel">
+<div class="vocab-panel-title">Key Vocabulary</div>
+<ul class="vocab-list">
+<li><span class="vocab-term">pinkwashing</span><span class="vocab-def">dùng hình ảnh ủng hộ LGBTQ+ để đánh bóng thương hiệu</span></li>
+<li><span class="vocab-term">publicly align with</span><span class="vocab-def">công khai thể hiện sự đồng hành với</span></li>
+<li><span class="vocab-term">LGBTQ+ inclusion</span><span class="vocab-def">sự hòa nhập cộng đồng LGBTQ+</span></li>
+<li><span class="vocab-term">deeply substantive</span><span class="vocab-def">thực chất, có chiều sâu</span></li>
+<li><span class="vocab-term">Pride-themed campaigns</span><span class="vocab-def">chiến dịch mang chủ đề Pride</span></li>
+<li><span class="vocab-term">rainbow-branded merchandise</span><span class="vocab-def">hàng hóa gắn nhận diện cầu vồng</span></li>
+<li><span class="vocab-term">symbolic inclusion</span><span class="vocab-def">sự hòa nhập mang tính biểu tượng</span></li>
+<li><span class="vocab-term">fair employment practices</span><span class="vocab-def">thực hành lao động công bằng</span></li>
+<li><span class="vocab-term">long-term advocacy</span><span class="vocab-def">sự ủng hộ lâu dài</span></li>
+<li><span class="vocab-term">lived commitment</span><span class="vocab-def">cam kết được thể hiện trong thực tế</span></li>
+<li><span class="vocab-term">highly polished messaging</span><span class="vocab-def">thông điệp được trau chuốt kỹ</span></li>
+<li><span class="vocab-term">commercial opportunism</span><span class="vocab-def">chủ nghĩa cơ hội thương mại</span></li>
+<li><span class="vocab-term">genuine allyship</span><span class="vocab-def">sự đồng hành thực chất</span></li>
+<li><span class="vocab-term">institutional choices</span><span class="vocab-def">các lựa chọn ở cấp tổ chức</span></li>
+</ul>
+</div>
+</div>
+<div class="page-footer">Nguồn học liệu: Miss Uyên · 0888 27 12 27</div></div>
+<!-- READING 12: HEALTHWASHING -->
+<div class="section-page page-break">
+<div class="section-header">
+<div>
+<div class="section-num">Reading 12</div>
+<div class="section-title"><em>Health</em>washing</div>
+</div>
+<div class="section-tag">Food Marketing &amp; Consumer Behaviour</div>
+</div>
+<div class="section-body">
+<div class="reading-text">
+<p><mark>Healthwashing</mark> refers to the practice of making products, especially foods and beverages, appear healthier than they really are through <span class="blue">selective language</span>, imagery, and marketing cues. In an era when consumers are increasingly concerned with nutrition and <mark>preventive health</mark>, brands have <span class="blue">strong incentives</span> to align themselves with these values. They may highlight <mark>natural ingredients</mark>, reduced-fat claims, or words associated with vitality, even when the overall product remains high in sugar, heavily processed, or <span class="blue">nutritionally questionable</span>.</p>
+<p>Research on food marketing has shown that <mark>health-related cues</mark> can <span class="blue">shape perception</span> in powerful ways, leading consumers to infer benefits that are not fully supported by the product's <mark>actual composition</mark>. This is precisely what makes healthwashing so effective: it does not always rely on <span class="blue">outright falsehood</span>, but often on emphasis, omission, and the <mark>strategic framing of information</mark>. Critics argue that such practices exploit people's desire to make <span class="blue">responsible choices</span> for themselves and their families, and can weaken public health efforts by creating a <mark>misleading sense of nutritional value</mark>. Experts therefore stress that the language of health is not always the same as <span class="blue">genuine healthfulness</span>.</p>
+</div>
+<div class="vocab-panel">
+<div class="vocab-panel-title">Key Vocabulary</div>
+<ul class="vocab-list">
+<li><span class="vocab-term">healthwashing</span><span class="vocab-def">làm cho sản phẩm trông lành mạnh hơn thực tế</span></li>
+<li><span class="vocab-term">selective language</span><span class="vocab-def">ngôn ngữ có chọn lọc</span></li>
+<li><span class="vocab-term">preventive health</span><span class="vocab-def">chăm sóc sức khỏe phòng ngừa</span></li>
+<li><span class="vocab-term">strong incentives</span><span class="vocab-def">động lực mạnh mẽ</span></li>
+<li><span class="vocab-term">natural ingredients</span><span class="vocab-def">thành phần tự nhiên</span></li>
+<li><span class="vocab-term">nutritionally questionable</span><span class="vocab-def">đáng nghi về mặt dinh dưỡng</span></li>
+<li><span class="vocab-term">health-related cues</span><span class="vocab-def">dấu hiệu gợi liên tưởng đến sức khỏe</span></li>
+<li><span class="vocab-term">shape perception</span><span class="vocab-def">định hình nhận thức</span></li>
+<li><span class="vocab-term">actual composition</span><span class="vocab-def">thành phần thực tế</span></li>
+<li><span class="vocab-term">outright falsehood</span><span class="vocab-def">sự dối trá hoàn toàn rõ ràng</span></li>
+<li><span class="vocab-term">strategic framing of information</span><span class="vocab-def">cách đóng khung thông tin mang tính chiến lược</span></li>
+<li><span class="vocab-term">responsible choices</span><span class="vocab-def">lựa chọn có trách nhiệm</span></li>
+<li><span class="vocab-term">misleading sense of nutritional value</span><span class="vocab-def">cảm giác sai lệch về giá trị dinh dưỡng</span></li>
+<li><span class="vocab-term">genuine healthfulness</span><span class="vocab-def">tính lành mạnh thực sự</span></li>
+</ul>
+</div>
+</div>
+<div class="page-footer">Nguồn học liệu: Miss Uyên · 0888 27 12 27</div></div>
+<!-- READING 13: AI-WASHING -->
+<div class="section-page page-break">
+<div class="section-header">
+<div>
+<div class="section-num">Reading 13</div>
+<div class="section-title"><em>AI-</em>Washing</div>
+</div>
+<div class="section-tag">Technology &amp; Corporate Deception</div>
+</div>
+<div class="section-body">
+<div class="reading-text">
+<p>Contemporary commerce is driven by the rapid <mark>commercialisation</mark> of Artificial Intelligence. Utilising sophisticated language models and <span class="blue">neural networks</span>, cutting-edge systems can process vast datasets into <mark>actionable</mark> insights with astonishing <span class="blue">precision</span>. However, within this landscape, the practice of <mark>AI-washing</mark> has emerged as a significant concern. The fundamental mechanics of this corporate <span class="blue">deception</span> rely on strategic marketing rather than actual machine learning: companies capture popular tech <mark>buzzwords</mark>, while <span class="blue">superficial</span> rules-based software attempts to <mark>masquerade</mark> as genuine AI.</p>
+<p>The economic <mark>ramifications</mark> of deceptive tech marketing extend far beyond consumer disappointment. Within the largely <span class="blue">unregulated</span> software industry, AI-washing threatens to <mark>destabilize</mark> critical markets by harvesting unearned capital through exaggerated technical capabilities. Addressing this challenge necessitates <span class="blue">statutory</span> frameworks that clearly define what constitutes true AI, though the <mark>intangible</mark> nature of algorithmic decision-making often complicates legal definitions. Fundamentally, fostering critical tech-literacy among the public remains the most formidable defence against algorithmic <span class="blue">exploitation</span>.</p>
+</div>
+<div class="vocab-panel">
+<div class="vocab-panel-title">Key Vocabulary</div>
+<ul class="vocab-list">
+<li><span class="vocab-term">AI-washing</span><span class="vocab-def">thổi phồng khả năng AI để đánh lừa người dùng/nhà đầu tư</span></li>
+<li><span class="vocab-term">commercialisation</span><span class="vocab-def">sự thương mại hóa</span></li>
+<li><span class="vocab-term">neural networks</span><span class="vocab-def">mạng lưới thần kinh</span></li>
+<li><span class="vocab-term">actionable</span><span class="vocab-def">có tính thực tiễn, có thể thực hiện được</span></li>
+<li><span class="vocab-term">precision</span><span class="vocab-def">sự chính xác</span></li>
+<li><span class="vocab-term">deception</span><span class="vocab-def">sự lừa dối, gian lận</span></li>
+<li><span class="vocab-term">buzzwords</span><span class="vocab-def">từ thông dụng tạo hiệu ứng truyền thông</span></li>
+<li><span class="vocab-term">superficial</span><span class="vocab-def">nông cạn, hời hợt</span></li>
+<li><span class="vocab-term">masquerade</span><span class="vocab-def">giả danh, trá hình</span></li>
+<li><span class="vocab-term">ramifications</span><span class="vocab-def">hệ lụy, kết quả phức tạp</span></li>
+<li><span class="vocab-term">unregulated</span><span class="vocab-def">không được kiểm soát (bởi luật pháp)</span></li>
+<li><span class="vocab-term">destabilize</span><span class="vocab-def">làm mất ổn định</span></li>
+<li><span class="vocab-term">statutory</span><span class="vocab-def">theo luật định, dựa trên quy chế</span></li>
+<li><span class="vocab-term">intangible</span><span class="vocab-def">vô hình, không thể chạm tới</span></li>
+<li><span class="vocab-term">exploitation</span><span class="vocab-def">sự khai thác, lợi dụng</span></li>
+</ul>
+</div>
+</div>
+<div class="page-footer">Nguồn học liệu: Miss Uyên · 0888 27 12 27</div></div>
+<!-- READING 14: ARTWASHING -->
+<div class="section-page page-break">
+<div class="section-header">
+<div>
+<div class="section-num">Reading 14</div>
+<div class="section-title"><em>Art</em>washing</div>
+</div>
+<div class="section-tag">Culture &amp; Urban Power</div>
+</div>
+<div class="section-body">
+<div class="reading-text">
+<p><mark>Artwashing</mark> refers to the use of art, artists, or cultural activity to <span class="blue">soften the image</span> of controversial developments, institutions, or sources of wealth. The term is especially common in debates about <mark>urban redevelopment</mark>, where galleries, installations, murals, and <span class="blue">creative branding</span> can make an area appear vibrant, desirable, and culturally alive. Yet critics argue that <mark>cultural prestige</mark> can also be <span class="blue">instrumentalised</span> to mask more troubling processes, particularly <mark>gentrification</mark>, <span class="blue">displacement</span>, or socially unequal redevelopment.</p>
+<p>In this sense, art may help <mark>repackage</mark> a place or institution in ways that attract investment and approval while making <span class="blue">underlying tensions</span> less visible. More recent scholarship suggests that artwashing can operate through developers, local authorities, and even artists themselves when cultural projects become part of a broader process of <mark>rebranding</mark> and <span class="blue">social cleansing</span>. The central concern is not that art lacks value, but that its <mark>symbolic legitimacy</mark> can be used to obscure who gains, who loses, and whose voice is marginalised. For that reason, critics contend that cultural projects should be assessed not only for their <span class="blue">aesthetic appeal</span>, but also for their political and economic context.</p>
+</div>
+<div class="vocab-panel">
+<div class="vocab-panel-title">Key Vocabulary</div>
+<ul class="vocab-list">
+<li><span class="vocab-term">artwashing</span><span class="vocab-def">dùng nghệ thuật để làm đẹp hình ảnh và che mờ vấn đề</span></li>
+<li><span class="vocab-term">soften the image of</span><span class="vocab-def">làm dịu/làm đẹp hình ảnh của</span></li>
+<li><span class="vocab-term">urban redevelopment</span><span class="vocab-def">tái phát triển đô thị</span></li>
+<li><span class="vocab-term">creative branding</span><span class="vocab-def">xây dựng thương hiệu sáng tạo</span></li>
+<li><span class="vocab-term">cultural prestige</span><span class="vocab-def">uy tín văn hóa</span></li>
+<li><span class="vocab-term">instrumentalised</span><span class="vocab-def">bị lợi dụng như công cụ</span></li>
+<li><span class="vocab-term">gentrification</span><span class="vocab-def">tái đô thị hóa gây bất bình đẳng</span></li>
+<li><span class="vocab-term">displacement</span><span class="vocab-def">sự di dời, đẩy cư dân đi nơi khác</span></li>
+<li><span class="vocab-term">repackage</span><span class="vocab-def">tái đóng gói, tái định hình hình ảnh</span></li>
+<li><span class="vocab-term">underlying tensions</span><span class="vocab-def">những căng thẳng ngầm</span></li>
+<li><span class="vocab-term">rebranding</span><span class="vocab-def">tái định vị thương hiệu</span></li>
+<li><span class="vocab-term">social cleansing</span><span class="vocab-def">sự "thanh lọc" xã hội</span></li>
+<li><span class="vocab-term">symbolic legitimacy</span><span class="vocab-def">tính chính danh mang tính biểu tượng</span></li>
+<li><span class="vocab-term">aesthetic appeal</span><span class="vocab-def">sức hấp dẫn về mặt thẩm mỹ</span></li>
+</ul>
+</div>
+</div>
+<div class="page-footer">Nguồn học liệu: Miss Uyên · 0888 27 12 27</div></div>
+<!-- READING 15: SPORTSWASHING -->
+<div class="section-page page-break">
+<div class="section-header">
+<div>
+<div class="section-num">Reading 15</div>
+<div class="section-title"><em>Sports</em>washing</div>
+</div>
+<div class="section-tag">Sport &amp; Geopolitics</div>
+</div>
+<div class="section-body">
+<div class="reading-text">
+<p><mark>Sportswashing</mark> is a term commonly used to describe the <span class="blue">strategic use</span> of sport to <mark>improve the reputation</mark> of a state, corporation, or <span class="blue">political actor</span> whose record may otherwise attract criticism. Because sport is associated with excellence, unity, and <mark>international prestige</mark>, it offers an unusually powerful platform for <span class="blue">image-building</span>. Governments and business interests can sponsor major clubs, host prestigious tournaments, or <mark>align themselves with</mark> famous athletes in order to project modernity, ambition, and <span class="blue">legitimacy</span> before a <mark>global audience</mark>.</p>
+<p>Yet critics argue that such visibility can also <mark>divert attention from</mark> troubling realities, including <span class="blue">human rights concerns</span>, <mark>political repression</mark>, or involvement in regional conflict. In this way, the spectacle of sport may function not only as entertainment but also as <span class="blue">reputational insulation</span>. The concern is not that sport itself is harmful, but that its emotional appeal can make difficult questions easier to ignore. For that reason, many observers contend that fans, clubs, sponsors, and governing bodies should look beyond branding and ask who benefits politically when sport becomes intertwined with <mark>national image management</mark>.</p>
+</div>
+<div class="vocab-panel">
+<div class="vocab-panel-title">Key Vocabulary</div>
+<ul class="vocab-list">
+<li><span class="vocab-term">sportswashing</span><span class="vocab-def">việc dùng thể thao để đánh bóng hình ảnh</span></li>
+<li><span class="vocab-term">strategic use</span><span class="vocab-def">việc sử dụng mang tính chiến lược</span></li>
+<li><span class="vocab-term">improve the reputation</span><span class="vocab-def">cải thiện danh tiếng</span></li>
+<li><span class="vocab-term">political actor</span><span class="vocab-def">chủ thể/tác nhân chính trị</span></li>
+<li><span class="vocab-term">international prestige</span><span class="vocab-def">uy tín quốc tế</span></li>
+<li><span class="vocab-term">image-building</span><span class="vocab-def">xây dựng hình ảnh</span></li>
+<li><span class="vocab-term">align themselves with</span><span class="vocab-def">gắn mình với</span></li>
+<li><span class="vocab-term">legitimacy</span><span class="vocab-def">tính chính danh</span></li>
+<li><span class="vocab-term">global audience</span><span class="vocab-def">công chúng toàn cầu</span></li>
+<li><span class="vocab-term">divert attention from</span><span class="vocab-def">chuyển hướng chú ý khỏi</span></li>
+<li><span class="vocab-term">human rights concerns</span><span class="vocab-def">lo ngại về nhân quyền</span></li>
+<li><span class="vocab-term">political repression</span><span class="vocab-def">đàn áp chính trị</span></li>
+<li><span class="vocab-term">reputational insulation</span><span class="vocab-def">lá chắn bảo vệ danh tiếng</span></li>
+<li><span class="vocab-term">national image management</span><span class="vocab-def">quản trị hình ảnh quốc gia</span></li>
+</ul>
+</div>
+</div>
+<div class="page-footer">Nguồn học liệu: Miss Uyên · 0888 27 12 27</div></div>
+</body>
+</html>
